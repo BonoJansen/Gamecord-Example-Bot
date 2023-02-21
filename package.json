@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "discord-gamecord": "^4.3.0",
+    "discord.js": "^14.7.1"
+  },
+  "name": "gamecord-example-bot",
+  "description": "Discord-Gamecord example bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BonoJansen/Gamecord-Example-Bot.git"
+  },
+  "keywords": [
+    "gamecord",
+    "discord-gamecord"
+  ],
+  "author": "BonoJansen_#3176",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BonoJansen/Gamecord-Example-Bot/issues"
+  },
+  "homepage": "https://github.com/BonoJansen/Gamecord-Example-Bot#readme"
+}

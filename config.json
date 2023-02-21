@@ -1,0 +1,25 @@
+{
+    "token" : "yourSuperSecretBotTokenHere",
+    "prefix" : "!",
+    "commandDisabledMessage" : "This game has been disabled in the bot's config. If you think this is an error, please contact the server owner.",
+    "games" : {
+        "2048" : true,
+        "Connect4" : true,
+        "Emojify" : true,
+        "FastType" : true,
+        "FindEmoji" : true,
+        "Fishy" : true,
+        "Flood" : false,
+        "GuessThePokemon" : true,
+        "Hangman" : true,
+        "MatchPairs" : true,
+        "Minesweeper" : true,
+        "RockPaperScissors" : true,
+        "Slots" : true,
+        "Snake" : true,
+        "TicTacToe" : true,
+        "Trivia" : true,
+        "Wordle" : true,
+        "WouldYouRather" : true
+    }
+}
