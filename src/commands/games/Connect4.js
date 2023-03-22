@@ -6,7 +6,7 @@ module.exports = {
   cmd: ["connect4"],
   run: async (client, message, args, cmd) => {
     if(!config.games.Connect4) return message.reply({ content : `${config.commandDisabledMessage}`})
-    if(!message.mention.users.first()) return message.reply({ content : `You need to **tag/mention** someone in the command as your opponent. This is a multiplayer game!`})
+    if(!message.mentions.users.first()) return message.reply({ content : `You need to **tag/mention** someone in the command as your opponent. This is a multiplayer game!`})
     
     const Game = new Connect4({
         message: message,

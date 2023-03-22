@@ -6,7 +6,7 @@ module.exports = {
   cmd: ["tictactoe"],
   run: async (client, message, args, cmd) => {
     if(!config.games.TicTacToe) return message.reply({ content : `${config.commandDisabledMessage}`})
-    if(!message.mention.users.first()) return message.reply({ content : `You need to **tag/mention** someone in the command as your opponent. This is a multiplayer game!`})
+    if(!message.mentions.users.first()) return message.reply({ content : `You need to **tag/mention** someone in the command as your opponent. This is a multiplayer game!`})
     
     const Game = new TicTacToe({
         message: message,

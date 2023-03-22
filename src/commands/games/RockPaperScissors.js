@@ -6,7 +6,7 @@ module.exports = {
   cmd: ["rockpaperscissors"],
   run: async (client, message, args, cmd) => {
     if(!config.games.RockPaperScissors) return message.reply({ content : `${config.commandDisabledMessage}`})
-    if(!message.mention.users.first()) return message.reply({ content : `You need to **tag/mention** someone in the command as your opponent. This is a multiplayer game!`})
+    if(!message.mentions.users.first()) return message.reply({ content : `You need to **tag/mention** someone in the command as your opponent. This is a multiplayer game!`})
     
     const Game = new RockPaperScissors({
         message: message,
@@ -30,7 +30,7 @@ module.exports = {
         mentionUser: true,
         timeoutTime: 60000,
         buttonStyle: 'PRIMARY',
-        pickMessage: 'You choose {emoji}.',
+        pickMessage: 'You chose {emoji}.',
         winMessage: '**{player}** won the Game! Congratulations!',
         tieMessage: 'The Game tied! No one won the Game!',
         timeoutMessage: 'The Game went unfinished! No one won the Game!',
