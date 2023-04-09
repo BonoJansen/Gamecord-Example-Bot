@@ -1,15 +1,19 @@
 //Please, leave this command alone, just gives me some credit. 
 const config = require("../../../config.json");
-const { EmbedBuilder} = require('discord.js')
+const { EmbedBuilder, SlashCommandBuilder } = require('discord.js')
 const { GuessThePokemon } = require('discord-gamecord');
 module.exports = {
-  cmd: ["guessthepokemon"],
-  run: async (client, message, args, cmd) => {
-    if(!config.games.GuessThePokemon) return message.reply({ content : `${config.commandDisabledMessage}`})
+  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  slashcommand : 
+    new SlashCommandBuilder()
+      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
+      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`),
+  run: async (client, interaction, options, cmd) => {
+    if(!config.games.GuessThePokemon) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})
     
     const Game = new GuessThePokemon({
-      message: message,
-      isSlashGame: false,
+      message: interaction,
+      isSlashGame: true,
       embed: {
         title: 'Who\'s The Pokemon',
         color: '#5865F2'

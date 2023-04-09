@@ -9,7 +9,7 @@
 [![Button npm package]](https://www.npmjs.com/package/discord-gamecord)
 
 That package is made by [aniket091](https://github.com/aniket091). 
-This bot is based on discord.js V14.7.1 and Discord-Gamecord V4.3.0
+This bot is based on discord.js V14.8.0 and Discord-Gamecord V4.4.0
 
 [![Button github aniket091]](https://github.com/aniket091)
 
@@ -30,14 +30,14 @@ npm install
 ```
 If this doesn't work, please try this
 ```bash
-npm install discord.js@14.7.1 discord-gamecord@4.3.0
+npm install discord.js@14.8.0 discord-gamecord@4.4.0
 ```
 To start the bot, run ``` node .``` in the terminal open from the root folder
 
 This bot may be update when a new version of [Discord-Gamecord](https://www.npmjs.com/package/discord-gamecord) is released. 
 
 ## 📝 Supported commands
-The default prefix is: ```!```. 
+This bot only supports slashcommands, type ```/``` in any discord chat the bot can acces to run the commands. 
 Commands included in this bot:
 
 | Command name               | Explanation                                                           |
@@ -123,6 +123,14 @@ If you would like to disable game, just set ``true`` to ``false`` of the game yo
     }
 }
 ```
+
+## 📝 Fishy Database
+
+The fishy game now has a database to keep track of all the fishes catched by each player. The database is server based, this means that all users have a different inventory per server.
+By keeping track of the inventory of users they can sell there fishes for balance. 
+
+Maybe in the future there will be a leaderboard command to see what users have the highest balance.
+
 
 ## 🔗 links
 

@@ -1,6 +1,5 @@
 {
     "token" : "yourSuperSecretBotTokenHere",
-    "prefix" : "!",
     "commandDisabledMessage" : "This game has been disabled in the bot's config. If you think this is an error, please contact the server owner.",
     "games" : {
         "2048" : true,

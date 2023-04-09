@@ -11,9 +11,17 @@ const client = new Discord.Client({
   ],
 });
 const config = require("./config.json");
+const database = require('easy-json-database')
+const db = new database("./FishyData/PlayerDatabase.json", {
+  snapshots: {
+      enabled: false
+  }
+});
 const { eventLoader, commandLoader } = require("./src/functions/loaders");
 client.commands = new Discord.Collection();
-
+client.slashCommands = [];
+client.database = db;
+  
 eventLoader(client);
 commandLoader(client);
 
