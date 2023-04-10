@@ -82,7 +82,7 @@ async function slashCommandRegister (client) {
   
       // The put method is used to fully refresh all commands in the guild with the current set
       const data = await rest.put(
-        Routes.applicationCommands("866307047485603861", "891056722788098118"),
+        Routes.applicationCommands(client.user.id),
         { body: client.slashCommands },
       );
   
