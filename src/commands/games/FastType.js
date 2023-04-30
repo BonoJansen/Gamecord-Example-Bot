@@ -6,7 +6,7 @@ module.exports = {
   cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
+      .setName(`fasttype`)
       .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`),
   run: async (client, interaction, options, cmd) => {
     if(!config.games.FastType) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})

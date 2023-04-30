@@ -3,11 +3,11 @@ const config = require("../../../config.json");
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js')
 const { RockPaperScissors } = require('discord-gamecord');
 module.exports = {
-  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  cmd: [`rockpaperscissors`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
-      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
+      .setName(`rockpaperscissors`)
+      .setDescription(`Play a game of rockpaperscissors`)
       .addUserOption(options => options.setName("opponent").setDescription("The user you want to play this game against.").setRequired(true)),
   run: async (client, interaction, options, cmd) => {
     if(!config.games.RockPaperScissors) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})

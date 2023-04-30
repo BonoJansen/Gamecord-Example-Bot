@@ -3,11 +3,11 @@ const config = require("../../../config.json");
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js')
 const { WouldYouRather } = require('discord-gamecord');
 module.exports = {
-  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  cmd: [`wouldyourather`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
-      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`),
+      .setName(`wouldyourather`)
+      .setDescription(`Play a game of wouldyourather`),
   run: async (client, interaction, options, cmd) => {
     if(!config.games.WouldYouRather) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})
 

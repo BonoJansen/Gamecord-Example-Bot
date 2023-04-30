@@ -3,11 +3,11 @@ const config = require("../../../config.json");
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js')
 const { Fishy } = require('discord-gamecord');
 module.exports = {
-  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  cmd: [`sellfish`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
-      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
+      .setName(`sellfish`)
+      .setDescription(`Play a game of sellfish`)
       .addStringOption(options => options.setName("fishtype").setDescription("The type of fish you want to sell.").setRequired(true).addChoices({ name: "junk", value : "junk" }, { name: "common", value : "common" }, { name: "uncommon", value : "uncommon" }, { name: "rare", value : "rare" }))
       .addNumberOption(options => options.setName("amount").setDescription("The amount of this type you want to sell.").setRequired(true)),
   run: async (client, interaction, options, cmd) => {

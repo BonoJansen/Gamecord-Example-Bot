@@ -3,11 +3,11 @@ const config = require("../../../config.json");
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js')
 const { GuessThePokemon } = require('discord-gamecord');
 module.exports = {
-  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  cmd: [`guessthepokemon`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
-      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`),
+      .setName(`guessthepokemon`)
+      .setDescription(`Play a game of guessthepokemon`),
   run: async (client, interaction, options, cmd) => {
     if(!config.games.GuessThePokemon) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})
     

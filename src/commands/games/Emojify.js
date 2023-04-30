@@ -3,14 +3,15 @@ const config = require("../../../config.json");
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js')
 const { Emojify } = require('discord-gamecord');
 module.exports = {
-  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  cmd: [`emojify`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
-      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`),
+      .setName(`emojify`)
+      .setDescription(`Play a game of emojify`)
+      .addStringOption(options => options.setName('text').setDescription('The text you want to emojify').setRequired(true)),
   run: async (client, interaction, options, cmd) => {
     if(!config.games.Emojify) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})
-    
-    interaction.reply(await Emojify(args));
+    const text = options.getString('text', true)
+    interaction.reply(await Emojify(text));
   },
 };

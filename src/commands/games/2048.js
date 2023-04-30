@@ -4,11 +4,11 @@ const { EmbedBuilder, SlashCommandBuilder} = require('discord.js')
 const { TwoZeroFourEight } = require('discord-gamecord');
 module.exports.cmdName = ["2048"]
 module.exports = {
-  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  cmd: [`2048`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
-      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`),
+      .setName(`2048`)
+      .setDescription(`Play a game of 2048`),
   run: async (client, interaction, options, cmd) => {
     if(!config.games[2048]) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})
     

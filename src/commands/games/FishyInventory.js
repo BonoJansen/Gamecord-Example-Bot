@@ -3,11 +3,11 @@ const config = require("../../../config.json");
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js')
 const { Fishy } = require('discord-gamecord');
 module.exports = {
-  cmd: [`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`],
+  cmd: [`fishinventory`],
   slashcommand : 
     new SlashCommandBuilder()
-      .setName(`${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`)
-      .setDescription(`Play a game of ${__filename.toLowerCase().split('games\\')[1].slice(0,[1].length-4)}`),
+      .setName(`fishinventory`)
+      .setDescription(`Play a game of fishinventory`),
   run: async (client, interaction, options, cmd) => {
     if(!config.games.Fishy) return interaction.reply({ content : `${config.commandDisabledMessage}`, ephemeral: true})
     
