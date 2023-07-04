@@ -146,7 +146,7 @@ Maybe in the future there will be a leaderboard command to see what users have t
 
 
 [Button npm package]: https://img.shields.io/badge/Discord_Gamecord-CB3837?style=for-the-badge&logoColor=white&logo=npm
-[Button github aniket091]: https://img.shields.io/badge/Aniket095-000000?style=for-the-badge&logoColor=white&logo=github
+[Button github aniket091]: https://img.shields.io/badge/Aniket091-000000?style=for-the-badge&logoColor=white&logo=github
 [Button discord developer portal]: https://img.shields.io/badge/Discord_developer_portal-7289DA?style=for-the-badge&logoColor=white&logo=Discord
 [Button Buy Me A Coffee]: https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logoColor=black&logo=buymeacoffee
 [Button Join Suppor Server]: https://img.shields.io/badge/Feel_free_to_join_here-7289DA?style=for-the-badge&logoColor=white&logo=Discord
